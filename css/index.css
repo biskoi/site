@@ -1,0 +1,354 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+/*Variables and mixins*/
+/*End of variables and mixins*/
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  max-width: 100%;
+}
+body {
+  margin: 0% 10%;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.6rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
+}
+section {
+  text-align: center;
+  margin: 3% 0%;
+}
+@media (max-width: 500px) {
+  section {
+    margin: 5% 0%;
+  }
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+  margin: 2%;
+}
+h3 {
+  font-size: 2rem;
+}
+nav {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1% auto 1% auto;
+  padding: 0.5% 0;
+  border-radius: 10px;
+  background-color: rgba(252, 99, 132, 0.507);
+  width: 40%;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2%;
+  }
+  nav a {
+    border: dotted 1px white;
+    border-radius: 20px;
+  }
+}
+.navTop {
+  text-decoration: underline;
+}
+#topContainer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 45vh;
+  justify-content: center;
+  align-items: center;
+}
+#topSection {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  background-color: rgba(255, 194, 194, 0.26);
+  align-items: center;
+  margin-right: 3%;
+  width: 55%;
+}
+#topSection .me {
+  width: 60%;
+  border-radius: 100%;
+}
+#topSection .cardInfo {
+  width: 40%;
+  text-align: left;
+  padding-left: 5%;
+}
+#topSection .cardInfo div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8% 0%;
+  justify-content: left;
+  font-size: 2.5rem;
+}
+#topSection .cardInfo div a {
+  margin-right: 4%;
+  color: #ff3aa6;
+  text-decoration: none;
+}
+#topSection .cardMe {
+  width: 40%;
+  padding: 2% 0;
+}
+.besideCard {
+  width: 25%;
+  height: 33vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.besideCard section {
+  background-color: rgba(250, 157, 157, 0.219);
+  border-radius: 20px;
+  padding: 4% 0;
+  height: 20vh;
+}
+.besideCard .beside1 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2%;
+}
+.besideCard .beside1 p {
+  max-height: inherit;
+  width: 80%;
+}
+.besideCard .beside2 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.besideCard .beside2 ul {
+  list-style: circle;
+  list-style-position: inside;
+  padding-top: 3%;
+  width: 50%;
+  text-align: center;
+}
+.besideCard .beside2 ul li {
+  padding: 2%;
+}
+#aboutSection {
+  background-color: rgba(250, 201, 201, 0.61);
+  border-radius: 20px;
+  padding: 2%;
+}
+#aboutSection div p {
+  margin-bottom: 2%;
+}
+#skillsSection {
+  background-color: rgba(250, 201, 201, 0.61);
+  border-radius: 20px;
+  text-align: center;
+  padding: 2%;
+}
+#skillsSection div {
+  padding: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#skillsSection div ul {
+  text-align: left;
+  list-style: circle;
+  padding: 1%;
+}
+#skillsSection div ul li {
+  padding: 2%;
+}
+#skillsSection div video {
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  #skillsSection div {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  #skillsSection div ul {
+    width: 60%;
+  }
+  #skillsSection div video {
+    padding: 4% 0% 0 0;
+    width: 70%;
+  }
+}
+#portfolioSection {
+  background-color: rgba(250, 201, 201, 0.61);
+  border-radius: 20px;
+  padding: 2%;
+}
+#portfolioSection div {
+  margin: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  #portfolioSection div {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+#portfolioSection div div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+#portfolioSection div div h3 {
+  margin: 4%;
+}
+#portfolioSection div div img {
+  height: 30vh;
+}
+#contactSection {
+  background-color: rgba(250, 201, 201, 0.61);
+  border-radius: 20px;
+  padding: 2%;
+}

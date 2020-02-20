@@ -1,0 +1,341 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+/*Variables and mixins*/
+
+@font:  'Muli', sans-serif;
+@mainBg:  rgba(250, 201, 201, 0.61);
+
+
+.flexRow(){
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.flexColumn(){
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.whiteBg(){
+	background-color: @mainBg;
+	border-radius: 20px;
+}
+
+.testBorder(){
+	border: solid red 2px;
+}
+
+/*End of variables and mixins*/
+
+
+
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	max-width: 100%;
+}
+
+body{
+	margin: 0% 10%;
+	// background-color: pink;
+	font-family: @font;
+	font-size: 1.6rem;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 1920px 1080px;
+}
+
+section{
+	text-align: center;
+	margin: 3% 0%;
+
+	@media (max-width: 500px){
+		margin: 5% 0%;
+	}
+}
+
+h1{
+	font-size: 5rem;
+}
+
+h2{
+	font-size: 3rem;
+	margin: 2%;
+}
+
+h3{
+	font-size: 2rem;
+	// text-decoration: underline;
+}
+
+
+nav{
+	text-align: center;
+	.flexRow();
+	margin: 1% auto 1% auto;
+	padding: 0.5% 0;
+	border-radius: 10px;
+	background-color: rgba(252, 99, 132, 0.507);
+	width: 40%;
+
+	a{
+		text-decoration: none;
+		color: white;
+		text-align: center;
+	}
+
+	@media (max-width: 500px){
+		.flexColumn();
+		// height: 40vh;
+		margin: 2%;
+		a{
+			border: dotted 1px white;
+			border-radius: 20px;
+		}
+	}
+}
+
+.navTop {
+	text-decoration: underline;
+}
+
+#topContainer{
+	.flexRow();
+	height: 45vh;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+#topSection{
+	.flexRow();
+	border-radius: 20px;
+	background-color: rgba(255, 194, 194, 0.26);
+	align-items: center;
+	margin-right: 3%;
+	width: 55%;
+	
+
+	.me{
+		width: 60%;
+		border-radius: 100%;
+	}
+
+	.cardInfo{
+		width: 40%;
+		text-align: left;
+		padding-left: 5%;
+
+		div{
+			.flexRow();
+			margin: 8% 0%;
+			justify-content: left;
+			font-size: 2.5rem;
+
+			a{
+				margin-right:4%;
+				color: rgb(255, 58, 166);
+				text-decoration: none;
+
+			}
+
+
+
+		}
+
+	}
+
+	.cardMe{
+		width: 40%;
+		padding: 2% 0;
+	}
+
+}
+
+.besideCard{
+	width: 25%;
+	height: 33vh;
+	.flexColumn;
+
+	section{
+		background-color: rgba(250, 157, 157, 0.219);
+		border-radius: 20px;
+		padding: 4% 0;
+		height: 20vh;
+	}
+
+	.beside1{
+		.flexColumn();
+		align-items: center;
+		justify-content: space-evenly;
+		// text-align: justify;
+		padding: 2%;
+
+		p{
+			max-height: inherit;
+			width: 80%;
+		}
+	}
+
+	.beside2{
+		.flexColumn();
+		align-items: center;
+		justify-content: space-evenly;
+
+		ul{
+			list-style: circle;
+			list-style-position: inside;
+			padding-top: 3%;
+			width: 50%;
+			text-align: center;
+
+			li{
+				padding: 2%;
+			}
+
+		}
+
+	}
+
+}
+
+#aboutSection{
+	.whiteBg();
+	padding: 2%;
+
+	div p{
+		margin-bottom: 2%;
+	}
+
+}
+
+#skillsSection{
+	.whiteBg();
+	text-align: center;
+	padding: 2%;
+
+	div{
+		padding: 2%;
+		margin-bottom: 2%;
+		.flexRow();
+		align-items: center;
+		justify-content: space-evenly;
+
+		ul{
+			text-align: left;
+			list-style: circle;
+			padding: 1%;
+
+			li{
+				padding: 2%;
+			}
+
+		}
+
+		video{
+			border-radius: 10px;
+		}
+
+		@media (max-width: 500px){
+			.flexColumn();
+
+			ul{
+				width: 60%;
+			}
+
+			video{
+				padding: 4% 0% 0 0;
+				width: 70%;
+			}
+		}
+	}
+
+}
+
+#portfolioSection{
+	.whiteBg();
+	padding: 2%;
+	
+	div{
+		margin: 1%;
+		.flexRow();
+		justify-content: center;
+
+		@media (max-width: 500px){
+			.flexColumn();
+		}
+
+		div{
+			.flexColumn();
+			justify-content: center;
+			
+			h3{
+				margin: 4%;
+			}
+		}
+
+		div img{
+			
+			height: 30vh;
+		}
+	}
+
+}
+
+#contactSection{
+	.whiteBg();
+	padding: 2%;
+}
