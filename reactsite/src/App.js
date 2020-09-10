@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
@@ -9,18 +9,23 @@ import Portfolio from './pages/Portfolio'
 import Nav from './Nav'
 
 function App() {
+
+  const [activeTab, setActiveTab] = useState('Home')
+
   return (
-    <>
-    <Nav/>
-    <div className = 'content'>
-    <Switch>
-      <Route exact path = '/' component = {Entry}/>
-      <Route exact path = '/About' component = {About}/>
-      <Route exact path = '/Contact' component = {Contact}/>
-      <Route exact path = '/Portfolio' component = {Portfolio}/>
-    </Switch>
+    <div className = 'main'>
+      <>
+      <Nav activeTab = {activeTab} setActiveTab = {setActiveTab}/>
+      <div className = 'content'>
+      <Switch>
+        <Route exact path = '/' component = {Entry}/>
+        <Route exact path = '/About' component = {About}/>
+        <Route exact path = '/Contact' component = {Contact}/>
+        <Route exact path = '/Portfolio' component = {Portfolio}/>
+      </Switch>
+      </div>
+      </>
     </div>
-    </>
   );
 }
 
