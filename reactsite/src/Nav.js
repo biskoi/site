@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Link as RouterLink} from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -11,8 +11,7 @@ text-align: center;
 
 export default function Nav(props) {
 
-   let navItems = ['Home', 'Portfolio', 'About', 'Contact']
-   // const [activeTab, setActiveTab] = useState('Home')
+   let navItems = ['Home', 'About', 'Portfolio', 'Contact']
    
    return (
       <div className = 'nav'>
@@ -21,8 +20,12 @@ export default function Nav(props) {
             <h3>biskoi</h3>
          </div>
          {navItems.map(item => 
-         <Link className = {item === props.activeTab ? 'navItems active' : 'navItems'} to = {`/${item === 'Home' ? '' : item}`} onClick = {() => props.setActiveTab(item)}>
-         {item}
+         <Link 
+            className = {item === props.activeTab ? 'navItems active' : 'navItems'} 
+            to = {`/${item === 'Home' ? '' : item}`} 
+            onClick = {() => props.setActiveTab(item)}
+         >
+            {item}
          </Link>
          )}
       </div>
