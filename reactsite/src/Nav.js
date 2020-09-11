@@ -11,7 +11,7 @@ text-align: center;
 
 export default function Nav(props) {
 
-   let navItems = ['Home', 'About', 'Portfolio', 'Contact']
+   let navItems = ['Home', 'Portfolio', 'Contact', 'Github']
    
    return (
       <div className = 'nav'>
@@ -19,15 +19,19 @@ export default function Nav(props) {
             <img src = {require('./me.jpg')} alt = 'me irl'></img>
             <h3>biskoi</h3>
          </div>
-         {navItems.map(item => 
-         <Link 
-            className = {item === props.activeTab ? 'navItems active' : 'navItems'} 
-            to = {`/${item === 'Home' ? '' : item}`} 
+         {navItems.map(item => (
+            item === 'Github' ? 
+            // <div/>
+            <a className = 'navItems inactive' href = 'https://github.com/biskoi'>Github</a>
+            :
+            <Link 
+            className = {item === props.activeTab ? 'navItems active' : 'navItems inactive'} 
+            to = {`${item === 'Home' ? '/': '/' + item}`} 
             onClick = {() => props.setActiveTab(item)}
-         >
+            >
             {item}
-         </Link>
-         )}
+            </Link>
+         ))}
       </div>
 
    )

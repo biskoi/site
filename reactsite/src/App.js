@@ -18,7 +18,7 @@ function App() {
       <Nav activeTab = {activeTab} setActiveTab = {setActiveTab}/>
       <div className = 'content'>
       <Switch>
-        <Route exact path = '/' component = {Entry}/>
+        <Route exact path = '/' component = {() => <Entry setActiveTab = {setActiveTab}/>}/>
         <Route exact path = '/About' component = {About}/>
         <Route exact path = '/Contact' component = {Contact}/>
         <Route exact path = '/Portfolio' component = {Portfolio}/>
