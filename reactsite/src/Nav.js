@@ -22,7 +22,7 @@ export default function Nav(props) {
          {navItems.map(item => (
             item === 'Github' ? 
             // <div/>
-            <a className = 'navItems inactive' href = 'https://github.com/biskoi'>Github</a>
+            <a className = 'navItems inactive' href = 'https://github.com/biskoi'>Github <img className = 'ext'src = {require('./img/ext.png')}/></a>
             :
             <Link 
             className = {item === props.activeTab ? 'navItems active' : 'navItems inactive'} 

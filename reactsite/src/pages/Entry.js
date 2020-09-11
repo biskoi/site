@@ -20,7 +20,7 @@ export default function Entry(props) {
                Hello!
             </h1>
             <p>
-               I'm a <span className = 'highlight'>full-stack web developer</span> specialising in front-end, comfortable with taking a project from pen-and-paper to a device. What's most important to me is learning constantly, passing the knowledge on, and pushing others forward along the way. I'd be a teacher if I didn't love computers so much.
+               I'm a <span className = 'highlight'>full-stack web developer</span> specialising in front-end, comfortable with taking a project from pen-and-paper to a device. What's most important to me is learning constantly, passing the knowledge on, and pushing others forward along the way. I'd be some kind of teacher if I didn't love computers so much.
                <img 
                   src = {require('../thinkh.png')} 
                   alt = 'thinking emoji'
@@ -28,7 +28,7 @@ export default function Entry(props) {
                />
             </p>
             <p>
-               If you're a business or individual needing presence on the web, <span className = 'highlight'>please get in touch with me <Link to = '/Contact' onClick = {() => props.setActiveTab('Contact')}>here</Link></span>. I look forward to hearing from you!
+               If you're a business or individual looking for a fully-custom site, a personalised one, or if you're looking to hire, <span className = 'highlight'>please get in touch with me <Link to = '/Contact' onClick = {() => props.setActiveTab('Contact')}>here</Link></span>. I look forward to hearing from you!
             </p>
          </div>
          <div className = 'homeSkills'>
